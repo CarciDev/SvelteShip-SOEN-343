@@ -1,2 +1,2 @@
-# SOEN-343
+# SvelteShip SOEN-343
 SOEN-343 Fall 2024
