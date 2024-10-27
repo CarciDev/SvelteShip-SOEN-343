@@ -1,0 +1,12 @@
+services:
+  postgres:
+    container_name: postgre-svelteship-soen-343
+    image: postgres
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    ports:
+      - ${DB_PORT}:5432
+    volumes:
+      - ./docker-data/db:/var/lib/postgresql/data/
