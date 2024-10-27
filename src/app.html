@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <!-- Add `class="dark"` to the html tag to make dark mode the default -->
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    %sveltekit.head%
+  </head>
+  <!-- Change `data-theme` value to switch between custom and preset themes -->
+  <body data-sveltekit-preload-data="hover" data-theme="customTheme">
+    <div style="display: contents" class="h-full overflow-hidden">
+      %sveltekit.body%
+    </div>
+  </body>
+</html>
