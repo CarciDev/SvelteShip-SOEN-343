@@ -1,0 +1,14 @@
+model PricingStrategy {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Keep it simple for now, fixed ETA... we could expand on this in the future
+  fixedEtaDays Int
+
+  // Higher price will be taken of price per kg and price per litre
+  pricePerKgCents Int
+  pricePerLCents  Int
+
+  quotationsMade Quotation[]
+}
