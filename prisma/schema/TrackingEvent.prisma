@@ -12,7 +12,7 @@ model TrackingEvent {
   createdAt             DateTime            @default(now())
   updatedAt             DateTime            @updatedAt
   type                  TrackingStatus
-  location              Location            @relation(fields: [locationId], references: [id])
+  location              EarthLocation       @relation(fields: [locationId], references: [id])
   locationId            Int
   shipment              ShipmentTransaction @relation(fields: [shipmentTransactionId], references: [id])
   shipmentTransactionId Int
