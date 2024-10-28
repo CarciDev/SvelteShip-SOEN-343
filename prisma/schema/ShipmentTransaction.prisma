@@ -9,7 +9,7 @@ model ShipmentTransaction {
   updatedAt DateTime @updatedAt
 
   // This should be a longer randomly-generated string to be more 'realistic'
-  trackingNumber String
+  trackingNumber String    @unique
   quotation      Quotation @relation(fields: [quotationId], references: [id])
   quotationId    Int       @unique
 

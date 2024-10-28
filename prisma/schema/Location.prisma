@@ -8,7 +8,7 @@ model Location {
   city               String?
   administartiveArea String? /// Code assigned by ISO 3166-2, without the country part
   postalCode         String? /// With spaces, in the form of the respective country
-  countryCode        String? /// ISO 3166-1 2-letter country code
+  countryCode        String?  @db.Char(2) /// ISO 3166-1 2-letter country code
   lat                Float
   lng                Float
 
