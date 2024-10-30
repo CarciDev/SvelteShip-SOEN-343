@@ -14,7 +14,7 @@ model ShipmentTransaction {
   quotationId    Int       @unique
 
   transactionType   TransactionType
-  transactionDetail String // eg. last 4 for Stripe
+  transactionDetail String? // eg. last 4 for Stripe
 
   shipper   User @relation(fields: [shipperId], references: [id])
   shipperId Int
