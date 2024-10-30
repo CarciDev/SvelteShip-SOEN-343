@@ -23,7 +23,7 @@ export class BoxRepository {
 
   static async findById(id: number): Promise<Box | null> {
     const dbResult = await prisma.box.findFirst({ where: { id: id } });
-    if (dbResult !== null) {
+    if (dbResult) {
       return new Box(dbResult);
     }
     return null;
